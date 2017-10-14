@@ -1,19 +1,13 @@
-package com.string.calculator;
+package is.ru.stringcalculator;
 
-public class StringCalculator {
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
 
- public int add(String stringInput) {
+public class CalculatorTest {
 
-  if ((stringInput.equals(null)) || (stringInput.equals("")))
-   return -2;
-
-  // String use the regular \\D(non digit) expression to split numbers
-  String stringArr[] = stringInput.split("\\D");
-  int total = 0;
-  for (String stringVal : stringArr) {
-   total += Integer.parseInt(stringVal);
-  }
-  return total;
- }
+	@Test
+ 	public void testEmptyString() {
+ 		assertEquals(0,Calculator.add(""));
+ 	}
 
 }
