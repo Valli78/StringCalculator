@@ -32,7 +32,7 @@ public class CalculatorTest {
 
  	@Test(expected = IllegalArgumentException.class)
  	public void testNegativeNumber() throws  IllegalArgumentException {
- 		 Calculator.add("-2,1");
+  		 Calculator.add("-2,1");
  	}
 
 }

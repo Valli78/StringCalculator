@@ -8,16 +8,26 @@ public class Calculator {
 		else{
 			if(text.contains("\n")){
 				text = text.replaceAll("\n",",");
-			}	
-			if(text.contains("-")){
-				throw new IllegalArgumentException("no negatives");
 			}		
 			if(text.contains(",")){
 				String numbers[] = text.split(",");
 				int total = 0;
+				 int[] neg = new int[100];
+				int i = 0; 
 				for(String number : numbers){
+					if(toInt(number) < 0){					
+						neg[i] = toInt(number);
+					}
+					if(toInt(number) >1000){					
+						break;
+					}					
+						i++;
 					total +=toInt(number);
-				}
+				} 
+			if(text.contains("-")){
+				throw new IllegalArgumentException("Negatives no allowed: " + neg);
+			} 
+
 				return total;
 			}
 			return 1; 
