@@ -20,4 +20,8 @@ public class CalculatorTest {
  		assertEquals(3,Calculator.add("1,2"));
  	}
 
+	@Test
+ 	public void testDifferentNumbers() {
+ 		assertEquals(10,Calculator.add("5,5"));
+ 	}
 }
