@@ -22,6 +22,12 @@ public class CalculatorTest {
 
 	@Test
  	public void testDifferentNumbers() {
- 		assertEquals(10,Calculator.add("5,5"));
+ 		assertEquals(10,Calculator.add("2,2,2,2,2"));
  	}
+
+ 	@Test
+ 	public void testNewlineChar() {
+ 		assertEquals(4,Calculator.add("1,1\n1,1"));
+ 	}
+
 }

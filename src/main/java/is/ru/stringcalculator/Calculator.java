@@ -6,6 +6,9 @@ public class Calculator {
 		if(text.equals(""))
 			return 0;
 		else{
+			if(text.contains("\n")){
+				text = text.replaceAll("\n",",");
+			}
 			if(text.contains(",")){
 				String numbers[] = text.split(",");
 				int total = 0;
