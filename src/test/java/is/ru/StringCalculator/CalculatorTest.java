@@ -35,4 +35,13 @@ public class CalculatorTest {
   		 Calculator.add("-2,1");
  	}
 
+ 	@Test
+ 	public void testLarger1000() {
+ 		assertEquals(2,Calculator.add("2,1002"));
+ 	}
+
+ 	@Test
+ 	public void testNewDelim() {
+ 		assertEquals(4,Calculator.add("//;\n2,2"));
+ 	}
 }

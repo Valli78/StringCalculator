@@ -6,6 +6,9 @@ public class Calculator {
 		if(text.equals(""))
 			return 0;
 		else{
+			if(text.startsWith("//")){
+				text = text.substring(4);
+			}
 			if(text.contains("\n")){
 				text = text.replaceAll("\n",",");
 			}		
