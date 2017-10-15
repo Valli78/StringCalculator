@@ -8,7 +8,10 @@ public class Calculator {
 		else{
 			if(text.contains("\n")){
 				text = text.replaceAll("\n",",");
-			}
+			}	
+			if(text.contains("-")){
+				throw new IllegalArgumentException("no negatives");
+			}		
 			if(text.contains(",")){
 				String numbers[] = text.split(",");
 				int total = 0;
